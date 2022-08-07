@@ -1,0 +1,27 @@
+@import '../../../styles/mixins.scss';
+
+$distance-from-edge: 40px;
+
+.wrapper {
+
+    position: fixed;
+    bottom: 0px;
+
+    &.right {
+        right: $distance-from-edge;
+    }
+    
+    &.left {
+        left: $distance-from-edge;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 80px;
+        margin: 20px auto auto auto;
+        background-color: #fff;
+    }
+
+}

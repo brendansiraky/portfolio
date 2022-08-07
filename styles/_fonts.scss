@@ -1,0 +1,23 @@
+@import './variables';
+
+// Inter-Regular
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('#{$font-path}/Inter/Inter-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('#{$font-path}/Inter/Inter-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('#{$font-path}/Inter/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

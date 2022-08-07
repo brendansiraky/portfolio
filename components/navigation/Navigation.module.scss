@@ -1,0 +1,25 @@
+@import '../../styles/mixins.scss';
+
+.wrapper {
+
+    @include position($position: fixed, $top: 0, $left: 0);
+    width: 100%;
+    padding: 30px 40px;
+
+    .nav {
+
+        @include flex(flex, row, wrap, space-between, center);
+
+        ul {
+
+            @include flex(flex, row, wrap, center, center);
+
+            li {
+                margin-left: 20px;
+            }
+
+        }
+
+    }
+
+}

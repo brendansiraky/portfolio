@@ -1,0 +1,30 @@
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+
+    @include flex(flex, column, wrap, center, flex-start);
+    min-height: 100vh;
+    width: 100%;
+
+    .name {
+        margin-bottom: $spacing-small;
+    }
+    
+    .title {
+        font-size: 50px;
+        margin-bottom: $spacing-medium;
+    }
+    
+    .description {
+        
+        font-size: 22px;
+        margin-bottom: $spacing-large;
+
+        span {
+            color: cyan;
+            font-family: $font-family-bold;
+        }
+
+    }
+
+}

@@ -1,0 +1,13 @@
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+
+    @include flex(flex, row, wrap, center, center);
+
+    .github {
+        @include background-image(github-logo, svg, contain, center, no-repeat);
+        width: 40px;
+        height: 40px;
+    }
+
+}

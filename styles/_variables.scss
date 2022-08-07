@@ -1,0 +1,38 @@
+// Font
+$font-family-bold: 'Inter-Bold', sans-serif;
+$font-family-regular: 'Inter-Regular', sans-serif;
+$font-size-default: 20px;
+
+// Colors
+$color-background: #020C1B;
+$color-text: #fff;
+$color-text-dark: #000;
+$color-primary: cyan;
+$color-secondary: #F652A0;
+
+// Styling
+$border-radius: 5px;
+$transition-time: 0.2s;
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 40px;
+
+// Image path
+$image-path: '../assets/images/';
+
+// Retina image suffix
+$image-suffix: '-2x';
+
+// Font path
+$font-path: '../assets/fonts';
+
+// Grid
+$grid-columns: 12;
+$grid-column-gutter: 30px;
+$container-padding: 150px;
+
+// break points
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1325px;

@@ -1,0 +1,9 @@
+@import '../../../styles/mixins.scss';
+
+.text {
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 1px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
