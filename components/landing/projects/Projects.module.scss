@@ -1,0 +1,28 @@
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+
+    @include flex(flex, row, wrap, center, center);
+    min-height: 100vh;
+    width: 100%;
+
+    .innerWrapper {
+
+        @include flex(flex, row, wrap, space-between, flex-start);
+        width: 100%;
+
+        .titleWrapper {
+            // width: 20%;
+        }
+
+        .contentWrapper {
+
+            width: 70%;
+
+            
+
+        }
+        
+    }
+
+}

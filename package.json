@@ -13,6 +13,7 @@
     "next": "12.2.4",
     "qs": "^6.11.0",
     "react": "18.2.0",
+    "react-animate-height": "^3.0.4",
     "react-dom": "18.2.0",
     "sass": "^1.54.3"
   },

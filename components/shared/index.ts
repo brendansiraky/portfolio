@@ -1,3 +1,3 @@
-export { default as SquareButton } from './Button/SquareButton'
-export { default as Container } from './Container/Container'
-export { default as Row } from './Row/Row'
+export { default as SquareButton } from './button/SquareButton'
+export { default as Layout } from './layout/Layout'
+export { default as Footer } from './footer/Footer'
