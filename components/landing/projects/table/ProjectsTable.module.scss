@@ -1,19 +1,6 @@
 
 @import '../../../../styles/mixins.scss';
 
-// Remove
-.easypeasy {
-    @include background-image(easy-peasy-logo, png, contain, center, no-repeat);
-    width: 39.5px;
-    height: 39.5px;
-}
-
-.react {
-    @include background-image(react-js-logo, png, contain, center, no-repeat);
-    width: 39.5px;
-    height: 39.5px;
-}
-
 .table {
 
     thead th {

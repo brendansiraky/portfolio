@@ -1,0 +1,14 @@
+@import '../../../../../styles/mixins.scss';
+
+.wrapper {
+ 
+    .builtWithWrapper {
+        margin-top: 20px;
+    }
+
+    .logosWrapper {
+        margin-top: 5px;
+        @include flex(flex, row, wrap, flex-start, flex-start);
+    }
+    
+}

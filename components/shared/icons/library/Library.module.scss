@@ -1,0 +1,33 @@
+@import '../../../../styles/mixins.scss';
+
+.library {
+
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+    &.reactjs {
+        @include background-image(react-js-logo, png, contain, center, no-repeat);
+    }
+    
+    &.easy-peasy {
+        @include background-image(easy-peasy-logo, png, contain, center, no-repeat);
+    }
+    
+    &.nestjs {
+        @include background-image(nest-js-logo, png, contain, center, no-repeat);
+    }
+
+    &.nextjs {
+        @include background-image(next-js-logo, png, contain, center, no-repeat);
+    }
+    
+    &.nodejs {
+        @include background-image(node-js-logo, png, contain, center, no-repeat);
+    }
+    
+    &.typescript {
+        @include background-image(typescript-logo, png, contain, center, no-repeat);
+    }
+
+}

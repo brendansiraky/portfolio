@@ -1,2 +1,2 @@
 export { default as Email } from './email/Email'
-export { default as Socials } from './socials/Socials'
+export { default as Platforms } from './platforms/Platforms'

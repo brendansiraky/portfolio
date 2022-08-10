@@ -1,0 +1,7 @@
+@import '../../../../styles/mixins.scss';
+
+.github {
+    @include background-image(github-logo, svg, contain, center, no-repeat);
+    width: 40px;
+    height: 40px;
+}
