@@ -7,6 +7,7 @@ import { fetchLanding } from '../api/fetchLanding'
 import { Layout } from '../components/shared'
 import { Hero } from '../components/landing'
 import { Landing } from '../types/Landing'
+import { Me } from '../components/landing/me/Me'
 
 const Landing: NextPage<Landing> = (landing) => {
     return (
@@ -18,6 +19,7 @@ const Landing: NextPage<Landing> = (landing) => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <Hero />
+                <Me />
                 <Projects />
             </Layout>
         </LandingContext.Provider>
