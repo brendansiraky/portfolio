@@ -13,7 +13,7 @@ export const ProjectNaming: React.FC<ProjectNamingProps> = ({ name, libraries, h
                 <h3>{name}</h3>
                 {hiddenSection(
                     <div className={styles.builtWithWrapper}>
-                        <h4>Built with:</h4>
+                        <h4>Technologies Involved:</h4>
                         <div className={styles.logosWrapper}>
                             {libraries.map(library => <Library key={library.id} {...library} />)}
                         </div>

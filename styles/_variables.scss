@@ -1,21 +1,24 @@
 // Font
 $font-family-bold: 'Inter-Bold', sans-serif;
 $font-family-regular: 'Inter-Regular', sans-serif;
-$font-size-default: 20px;
+$font-family-semibold: 'Inter-SemiBold', sans-serif;
+$font-size-default: 18px;
 
 // Colors
 $color-background: #020C1B;
 $color-text: #fff;
 $color-text-dark: #000;
-$color-primary: cyan;
+$color-primary: gold;
 $color-secondary: #F652A0;
 
 // Styling
 $border-radius: 5px;
 $transition-time: 0.2s;
+$spacing-extra-small: 5px;
 $spacing-small: 10px;
 $spacing-medium: 20px;
 $spacing-large: 40px;
+$spacing-extra-large: 80px;
 
 // Image path
 $image-path: '../assets/images/';

@@ -7,10 +7,11 @@ type SectionTitleProps = {
 export const SectionTitle: React.FC<SectionTitleProps> = ({ title }) => {
     return (
         <div className={styles.wrapper}>
+            <h2>Featured Project</h2>
             <h1>{title}</h1>
-            {/* <div className={styles.description}>
-                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.</p>
-            </div> */}
+            <div className={styles.description}>
+                <p>A Voxel-Styled MMORPG building on the cardano ecosystem.</p>
+            </div>
         </div>
     )
 }

@@ -10,12 +10,25 @@
 
         @include flex(flex, row, wrap, space-between, center);
 
+        .logo {
+            @include background-image(logo, svg, contain, center, no-repeat);
+            width: 35px;
+            height: 46px;
+        }
+
         ul {
 
             @include flex(flex, row, wrap, center, center);
 
             li {
                 margin-left: 20px;
+                font-family: $font-family-semibold;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            
+            li:nth-child(1) {
+                margin: 0;
             }
 
         }

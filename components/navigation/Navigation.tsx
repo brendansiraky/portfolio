@@ -6,12 +6,11 @@ export const Naivigation: React.FC<{}> = () => {
     return (
         <header className={styles.wrapper}>
             <nav className={styles.nav}>
-                <div>Logo</div>
+                <div className={styles.logo} />
                 <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                    <li>Link 3</li>
-                    <li>Link 4</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
         </header>

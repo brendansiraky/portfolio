@@ -1,48 +1,85 @@
 @import '../../../styles/mixins.scss';
 
+$ratio: 1.232;
+$width: 300px;
+$height: calc($width * $ratio);
+
 .wrapper {
 
     @include flex(flex, row, wrap, center, center);
-    min-height: 100vh;
-    width: 100%;
 
-    .innerWrapper {
+    .imageWrapper {
 
-        @include flex(flex, row, wrap, space-between, flex-start);
-        width: 100%;
+        margin-right: $spacing-extra-large;
 
-        .contentWrapper {
-
-            width: 50%;
-
-            .technologiesWrapper {
-
-                border: solid 1px #fff;
-                border-left: none;
-                border-right: none;
-                padding: 30px 30px;
-
-                ul {
-                
-                    grid-template-columns: repeat(2, minmax(120px, 220px));
-                    display: grid;
-
-                    li {
-                        font-size: 18px;
-                        line-height: 1.3;
-                    }
-
+        &:hover {
+            .image {
+                &:before {
+                    transform: translate(10px, -10px)
                 }
+            }
+        }
 
-                h4 {
-                    margin-bottom: 10px;
-                    font-size: 22px;
+        .image {
+
+            position: relative;
+            @include background-image(me, jpg, contain, center, no-repeat);
+            border-radius: 5px;
+            width: $width;
+            height: $height;
+            border: 5px solid #010C1B;
+    
+            &:before {
+                content: '';
+                border: 5px solid $color-primary;
+                border-radius: 5px;
+                filter: drop-shadow(0 0 2px $color-primary);
+                height: $height;
+                @include position($position: absolute, $bottom: -$spacing-large, $left: -$spacing-large);
+                transition: transform 0.2s;
+                width: $width;
+                z-index: -1;
+            }
+    
+        }
+
+    }
+
+    .content {
+
+        width: 50%;
+
+        .separator {
+            margin: $spacing-medium 0;
+            width: 15%;
+            height: 2px;
+            background-color: $color-primary;
+            filter: drop-shadow(0 0 2px $color-primary);
+        }
+
+        p {
+            margin-bottom: $spacing-medium;
+            opacity: 0.8;
+        }
+
+        ul {
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(140px, 200px));
+            margin: -$spacing-small 0 $spacing-medium 0;
+
+            li {
+                &:before {
+                    content: '⤃';
+                    color: $color-primary;
+                    margin-right: $spacing-extra-small;
+                    position: relative;
+                    bottom: 2px;
                 }
-
             }
 
         }
-        
+
     }
 
 }

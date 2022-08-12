@@ -5,7 +5,7 @@
 
     thead th {
         border-bottom: 1px solid #fff;
-        padding-bottom: 15px;
+        padding-bottom: $spacing-small;
     }
 
     thead th:nth-child(1) {
@@ -24,7 +24,7 @@
 
     tbody td {
         border-bottom: 1px solid #fff;
-        padding: 26px 0;
+        padding: $spacing-medium 0;
     }
 
     tbody tr {

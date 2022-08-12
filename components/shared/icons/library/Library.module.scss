@@ -29,5 +29,13 @@
     &.typescript {
         @include background-image(typescript-logo, png, contain, center, no-repeat);
     }
+    
+    &.postgres {
+        @include background-image(postgres-logo, png, contain, center, no-repeat);
+    }
+    
+    &.docker {
+        @include background-image(docker-logo, png, contain, center, no-repeat);
+    }
 
 }

@@ -1,9 +1,22 @@
+@import '../../../styles/mixins.scss';
+
 .wrapper {
 
     width: 30%;
+    @include flex(flex, column, wrap, flex-end, flex-end);
+    text-align: right;
+
+    h1 {
+        margin: $spacing-small 0 $spacing-medium 0;
+    }
+
+    h2 {
+        color: $color-primary;
+        font-size: 22px;
+    }
 
     .description {
-        padding: 20px 40px 0 0;
+        max-width: 80%;
     }
 
 }
