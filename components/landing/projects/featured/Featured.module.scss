@@ -13,11 +13,30 @@
 
         .contentWrapper {
 
+            @include flex(flex, row, wrap, flex-end, center);
             width: 65%;
+            position: relative;
+
             .image {
                 @include background-image(sunterra-frontend, png, contain, center, no-repeat);
-                width: 749px;
-                height: 468px;
+                width: 70%;
+                padding-bottom: percentage($number: calc((2100 / 3360)));
+            }
+
+            .imageDescription {
+                padding: $spacing-medium;
+                width: 40%;
+                background-color: rgba(14, 24, 38, 0.9);
+                border-radius: 10px;
+                position: absolute;
+                left: 0px;
+
+                p {
+                    margin-bottom: $spacing-small;
+                    font-size: 16px;
+
+                }
+
             }
 
         }

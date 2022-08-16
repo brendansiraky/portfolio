@@ -19,4 +19,9 @@
         max-width: 80%;
     }
 
+    .technologiesWrapper {
+        @include flex(flex, row, wrap, flex-end, flex-end);
+        margin-top: $spacing-medium;
+    }
+
 }
