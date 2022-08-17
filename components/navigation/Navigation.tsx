@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Navigation.module.scss'
 
-export const Naivigation: React.FC<{}> = () => {
+export const Navigation: React.FC<{}> = () => {
     return (
         <header className={styles.wrapper}>
             <nav className={styles.nav}>

@@ -17,6 +17,7 @@ export type Platform = {
     id: number
     name: string
     link: string
+    logo: Media
 }
 
 export type Project = {
@@ -24,11 +25,22 @@ export type Project = {
     name: string
     short_description: string
     long_description: string
-    libraries: Library[]
+    technologies: Technology[]
 }
 
-export type Library = {
+export type Technology = {
     id: number
     name: string
     link: string
+    logo: Media
+}
+
+// Move to more global type
+export type Media = {
+    data: {
+        attributes: {
+            alternativeText: string
+            url: string
+        }
+    }
 }

@@ -10,9 +10,17 @@ import { Layout } from '../components/shared'
 import { Hero } from '../components/landing'
 import { Landing } from '../types/Landing'
 import { Me } from '../components/landing/me/Me'
-import { Featured } from '../components/landing/projects/featured/Featured'
 
 const Landing: NextPage<Landing> = (landing) => {
+
+    const SectionWrapper: React.FC<{ children: JSX.Element }> = ({ children }) => (
+        <div className="section">
+            {children}
+        </div>
+    )
+
+    console.log(landing.projects[0].technologies[0])
+
     return (
         <LandingContext.Provider value={landing}>
             <Layout>
@@ -29,11 +37,15 @@ const Landing: NextPage<Landing> = (landing) => {
                     render={() => {
                         return (
                             <ReactFullpage.Wrapper>
-                                {[Hero, Me, Featured].map((Section, index) => (
-                                    <div key={index} className="section">
-                                        <Section />
-                                    </div>
-                                ))}
+                                <SectionWrapper>
+                                    <Hero />
+                                </SectionWrapper>
+                                <SectionWrapper>
+                                    <Me />
+                                </SectionWrapper>
+                                <SectionWrapper>
+                                    <Projects projects={landing.projects} />
+                                </SectionWrapper>
                             </ReactFullpage.Wrapper>
                         )
                     }}

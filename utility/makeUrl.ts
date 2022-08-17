@@ -1,0 +1,1 @@
+export const makeUrl = (endpoint: string) => `${process.env.BACKEND_ENDPOINT}:${process.env.BACKEND_PORT}${endpoint}`
