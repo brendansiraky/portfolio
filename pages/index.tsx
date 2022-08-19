@@ -6,21 +6,12 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import { Projects } from '../components/landing/projects/Projects'
 import { LandingContext } from '../model/context/LandingContext'
 import { fetchLanding } from '../api/fetchLanding'
+import { Me } from '../components/landing/me/Me'
 import { Layout } from '../components/shared'
 import { Hero } from '../components/landing'
 import { Landing } from '../types/Landing'
-import { Me } from '../components/landing/me/Me'
 
 const Landing: NextPage<Landing> = (landing) => {
-
-    const SectionWrapper: React.FC<{ children: JSX.Element }> = ({ children }) => (
-        <div className="section">
-            {children}
-        </div>
-    )
-
-    console.log(landing.projects[0].technologies[0])
-
     return (
         <LandingContext.Provider value={landing}>
             <Layout>
@@ -34,18 +25,15 @@ const Landing: NextPage<Landing> = (landing) => {
                     licenseKey={process.env.FULLPAGE_LICENSE_KEY || ''}
                     showActiveTooltip={false}
                     navigation={true}
+                    
                     render={() => {
                         return (
                             <ReactFullpage.Wrapper>
-                                <SectionWrapper>
-                                    <Hero />
-                                </SectionWrapper>
-                                <SectionWrapper>
-                                    <Me />
-                                </SectionWrapper>
-                                <SectionWrapper>
-                                    <Projects projects={landing.projects} />
-                                </SectionWrapper>
+                                {[Hero, Me, Projects].map(Component => (
+                                    <div className="section">
+                                        <Component />
+                                    </div>
+                                ))}
                             </ReactFullpage.Wrapper>
                         )
                     }}

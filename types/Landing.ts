@@ -1,9 +1,12 @@
+import { Media } from './Media'
+
 export type RawLanding = {
     data: {
         id: number
         attributes: {
             createdAt: string
             updatedAt: string
+            me: Me
             platforms: Platform[]
             projects: Project[]
         }
@@ -26,6 +29,16 @@ export type Project = {
     short_description: string
     long_description: string
     technologies: Technology[]
+    sources: Source[]
+    image: Media
+}
+
+export type Me = {
+    id: string
+    about: string
+    technologies: {
+        name: string
+    }[]
 }
 
 export type Technology = {
@@ -35,12 +48,7 @@ export type Technology = {
     logo: Media
 }
 
-// Move to more global type
-export type Media = {
-    data: {
-        attributes: {
-            alternativeText: string
-            url: string
-        }
-    }
+export type Source = {
+    name: string
+    link: string
 }

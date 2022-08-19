@@ -11,7 +11,8 @@
         @include flex(flex, row, wrap, space-between, center);
 
         .logo {
-            @include background-image(logo, svg, contain, center, no-repeat);
+            background-repeat: no-repeat;
+            background-size: contain;
             width: 35px;
             height: 46px;
         }

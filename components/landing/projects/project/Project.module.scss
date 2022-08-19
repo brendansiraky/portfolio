@@ -12,12 +12,10 @@
         position: relative;
 
         .image {
-            @include background-image(sunterra-frontend, png, contain, center, no-repeat);
             width: 70%;
-            padding-bottom: percentage($number: calc((2100 / 3360)));
         }
 
-        .imageDescription {
+        .descriptionWrapper {
 
             padding: $spacing-medium;
             width: 40%;
@@ -30,7 +28,6 @@
             p {
                 margin-bottom: $spacing-small;
                 font-size: 16px;
-
             }
 
         }
@@ -59,6 +56,14 @@
         .technologiesWrapper {
             @include flex(flex, row, wrap, flex-end, flex-end);
             margin-top: $spacing-medium;
+        }
+
+        .technologiesWrapper > * {
+            margin-right: $spacing-small;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
 
     }

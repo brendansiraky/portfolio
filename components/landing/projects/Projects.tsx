@@ -1,13 +1,13 @@
-import { Project as ProjectType } from '../../../types/Landing'
+import { useContext } from 'react'
+
+import { LandingContext } from '../../../model/context/LandingContext'
 import { Project } from './project/Project'
 import styles from './Projects.module.scss'
 
-type ProjectsProps = {
-    projects: ProjectType[]
-}
-
-export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+export const Projects: React.FC<{}> = () => {
+    const { projects } = useContext(LandingContext)
     const sunterra = projects[0]
+
     return (
         <section className={styles.wrapper}>
             <Project {...sunterra} />

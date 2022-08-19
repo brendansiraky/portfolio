@@ -1,9 +1,16 @@
+import ReactMarkdown from "react-markdown"
+
 import { Project as ProjectType } from '../../../../types/Landing'
-import { Platform, Technology } from '../../../shared'
+import { Source } from '../../../shared/icons/source/Source'
+import { makeUrl } from '../../../../utility/makeUrl'
+import { Technology } from '../../../shared'
 import styles from './Project.module.scss'
 
 type ProjectProps = ProjectType
-export const Project: React.FC<ProjectProps> = ({ name, short_description, long_description, technologies }) => {
+
+export const Project: React.FC<ProjectProps> = ({ name, short_description, long_description, technologies, sources, image }) => {
+    const { data: { attributes: { url, alternativeText } } } = image
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.titleWrapper}>
@@ -17,10 +24,10 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
                 </div>
             </div>
             <div className={styles.contentWrapper}>
-                <div className={styles.image} />
-                <div className={styles.imageDescription}>
-                    <p>{long_description}</p>
-                    {/* <Platform link="" id={1} name="github" logo={{ data: { attributes: { alternativeText: '', url: '' } } }} /> */}
+                <img className={styles.image} alt={alternativeText} src={makeUrl(url)} />
+                <div className={styles.descriptionWrapper}>
+                    <ReactMarkdown children={long_description} />
+                    {sources.map(source => <Source {...source} />)}
                 </div>
             </div>
         </div>

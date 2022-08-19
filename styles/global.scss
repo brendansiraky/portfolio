@@ -5,3 +5,7 @@
 @import './fonts.scss';
 @import './text.scss';
 @import './base.scss';
+
+#fp-nav ul li a.active span {
+    background-color: #fff !important;
+}
