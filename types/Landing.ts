@@ -39,6 +39,8 @@ export type Me = {
     technologies: {
         name: string
     }[]
+    portrait: Media
+    title: string
 }
 
 export type Technology = {

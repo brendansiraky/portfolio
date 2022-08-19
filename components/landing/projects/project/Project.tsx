@@ -27,7 +27,7 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
                 <img className={styles.image} alt={alternativeText} src={makeUrl(url)} />
                 <div className={styles.descriptionWrapper}>
                     <ReactMarkdown children={long_description} />
-                    {sources.map(source => <Source {...source} />)}
+                    {sources.map(source => <Source key={source.name} {...source} />)}
                 </div>
             </div>
         </div>

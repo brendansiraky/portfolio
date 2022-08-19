@@ -22,15 +22,15 @@ const Landing: NextPage<Landing> = (landing) => {
                 </Head>
 
                 <ReactFullpage
-                    licenseKey={process.env.FULLPAGE_LICENSE_KEY || ''}
+                    licenseKey={process.env.FULLPAGE_LICENSE_KEY}
                     showActiveTooltip={false}
                     navigation={true}
                     
                     render={() => {
                         return (
                             <ReactFullpage.Wrapper>
-                                {[Hero, Me, Projects].map(Component => (
-                                    <div className="section">
+                                {[Hero, Me, Projects].map((Component, index) => (
+                                    <div key={index} className="section">
                                         <Component />
                                     </div>
                                 ))}

@@ -7,6 +7,9 @@ export type RawGlobal = {
             createdAt: string
             updatedAt: string
             logo: Media
+            email: string
+            name: string
+            build: string
         }
     }
 }

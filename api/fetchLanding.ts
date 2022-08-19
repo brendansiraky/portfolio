@@ -6,7 +6,14 @@ export const fetchLanding = async () => {
     const rawLanding = await fetchAPI(`/landing`, {
         populate: {
             me: {
-                populate: '*'
+                populate: {
+                    portrait: {
+                        populate: '*'
+                    },
+                    technologies: {
+                        populate: '*'
+                    }
+                }
             },
             platforms: {
                 populate: '*'

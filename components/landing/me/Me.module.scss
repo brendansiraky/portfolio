@@ -23,7 +23,9 @@ $height: calc($width * $ratio);
         .image {
 
             position: relative;
-            @include background-image(me, jpg, contain, center, no-repeat);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             border-radius: 5px;
             width: $width;
             height: $height;
@@ -36,7 +38,7 @@ $height: calc($width * $ratio);
                 filter: drop-shadow(0 0 2px $color-primary);
                 height: $height;
                 @include position($position: absolute, $bottom: -$spacing-large, $left: -$spacing-large);
-                transition: transform 0.2s;
+                transition: transform $transition-time;
                 width: $width;
                 z-index: -1;
             }
