@@ -1,0 +1,41 @@
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+
+    @include flex(flex, row, wrap, center, center);
+    min-height: 100vh;
+
+    .headingWrapper {
+
+        .separator {
+            width: 35%;
+            margin: $spacing-large auto $spacing-large;
+            height: 2px;
+            background-color: $color-primary;
+            filter: drop-shadow(0 0 2px $color-primary);
+        }
+        
+    }
+
+    ul {
+
+        grid-template-columns: repeat(4, 300px);
+        gap: $spacing-medium;
+        position: relative;
+        display: grid;
+
+        @include breakpoint(lg) {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        li {
+            min-height: 340px;
+        }
+
+    }
+
+    .buttonWrapper {
+        margin-top: $spacing-large;
+    }
+
+}

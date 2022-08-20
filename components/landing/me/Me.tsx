@@ -5,7 +5,7 @@ import { LandingContext } from '../../../model/context/LandingContext'
 import { makeUrl } from '../../../utility/makeUrl'
 import styles from './Me.module.scss'
 
-export const Me: React.FC<{}> = () => {
+const Me: React.FC<{}> = () => {
     const { me: { about, technologies, portrait, title } } = useContext(LandingContext)
 
     return (
@@ -14,7 +14,7 @@ export const Me: React.FC<{}> = () => {
                 <div className={styles.image} style={{ backgroundImage: `url('${makeUrl(portrait.data.attributes.url)}')` }} />
             </div>
             <div className={styles.content}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <div className={styles.separator} />
                 <ReactMarkdown children={about} />
                 <ul>
@@ -24,3 +24,5 @@ export const Me: React.FC<{}> = () => {
         </section>
     )
 }
+
+export default Me

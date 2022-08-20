@@ -30,6 +30,16 @@ export const fetchLanding = async () => {
                         populate: '*'
                     }
                 },
+            },
+            archives: {
+                populate: {
+                    technologies: {
+                        populate: '*'
+                    },
+                    sources: {
+                        populate: '*'
+                    }
+                }
             }
         }
     }) as RawLanding

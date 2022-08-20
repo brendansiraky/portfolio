@@ -3,12 +3,10 @@ import Head from 'next/head'
 
 import ReactFullpage from '@fullpage/react-fullpage'
 
-import { Projects } from '../components/landing/projects/Projects'
 import { LandingContext } from '../model/context/LandingContext'
 import { fetchLanding } from '../api/fetchLanding'
-import { Me } from '../components/landing/me/Me'
 import { Layout } from '../components/shared'
-import { Hero } from '../components/landing'
+import { Hero, Me, Projects, Archives } from '../components/landing'
 import { Landing } from '../types/Landing'
 
 const Landing: NextPage<Landing> = (landing) => {
@@ -21,23 +19,10 @@ const Landing: NextPage<Landing> = (landing) => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                <ReactFullpage
-                    licenseKey={process.env.FULLPAGE_LICENSE_KEY}
-                    showActiveTooltip={false}
-                    navigation={true}
-                    
-                    render={() => {
-                        return (
-                            <ReactFullpage.Wrapper>
-                                {[Hero, Me, Projects].map((Component, index) => (
-                                    <div key={index} className="section">
-                                        <Component />
-                                    </div>
-                                ))}
-                            </ReactFullpage.Wrapper>
-                        )
-                    }}
-                />
+                <Hero />
+                <Me />
+                <Projects />
+                <Archives />
             </Layout>
         </LandingContext.Provider>
     )

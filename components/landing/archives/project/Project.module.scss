@@ -1,0 +1,90 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+
+    @include flex(flex, column, nowrap, space-between, space-between);
+    border-radius: 5px;
+    background-color: lighten($color: $color-background, $amount: 5%);
+    cursor: pointer;
+    padding: $spacing-medium;
+    height: 100%;
+    transition: transform $transition-time;
+
+    &:hover {
+
+        transform: translateY(-$spacing-small);
+
+        h3 {
+            color: $color-primary;
+        }
+
+    }
+
+    h3 {
+        transition: color $transition-time;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .bannerWrapper {
+    
+        margin-bottom: $spacing-large;
+        @include flex(flex, row, wrap, space-between, center);
+
+        .icon {
+            @include background-image(folder, svg, contain, center, no-repeat);
+            width: 30px;
+            height: 30px;
+        }
+
+        .sourcesWrapper {
+
+            @include flex(flex, row, wrap, center, center);
+
+            .sourceWrapper {
+
+                margin-right: $spacing-medium;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+            }
+
+        }
+    
+    }
+
+    .titleWrapper {
+        margin-bottom: $spacing-medium;
+    }
+
+    .descriptionWrapper {
+
+        margin-bottom: $spacing-medium;
+        
+        p {
+            margin-bottom: $spacing-medium;
+        }
+
+    }
+
+    .technologiesWrapper {
+
+        @include flex(flex, row, wrap, flex-start, center);
+
+        .technologyWrapper {
+
+            margin-right: $spacing-small;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    
+    }
+
+}

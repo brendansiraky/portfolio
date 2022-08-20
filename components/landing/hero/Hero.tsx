@@ -16,7 +16,6 @@ const Hero: React.FC<{}> = () => {
                     <div className={styles.line} />
                 </div>
                 <h1>{name}</h1>
-                {/* <div className={styles.build}>I BUILD <span>MOBILE & WEB <br />APPLICATIONS</span></div> */}
                 <div className={styles.build}>I BUILD <span><ReactMarkdown children={build}/></span></div>
             </div>
         </section>

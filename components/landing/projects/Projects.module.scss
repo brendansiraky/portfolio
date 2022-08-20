@@ -3,45 +3,31 @@
 .wrapper {
 
     @include flex(flex, row, wrap, center, center);
-    min-height: 100vh;
     position: relative;
-    width: 100%;
+    min-height: 100vh;
 
-    .navigationWrapper {
+    .navWrapper {
 
         @include flex(flex, row, wrap, center, center);
         position: absolute;
         bottom: 15%;
 
-        .back {
-            @include background-image(chevron-back, svg, contain, center, no-repeat);
-            height: 35px;
-            width: 20px;
-            margin-right: 20px;
+        .navItem {
+
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(0.7);
+            transition: transform 0.5s;
             cursor: pointer;
-        }
-        
-        .forward {
-            @include background-image(chevron-forward, svg, contain, center, no-repeat);
-            height: 35px;
-            width: 20px;
-            margin-left: 20px;
-            cursor: pointer;;
-        }
-
-        .navigationItem {
-
-            cursor: pointer;
-            width: 20px;
-            height: 5px;
-            margin: 0px 10px;
-            border-radius: 5px;
-            background-color: #fff;
-            opacity: 0.3;
-            transition: opacity $transition-time;
-
+            margin: 0 3px;
+            
             &.active {
-                opacity: 1;
+                background-color: $color-primary;
+                transform: scale(1);
+                margin: 0 5px;
+
             }
 
         }

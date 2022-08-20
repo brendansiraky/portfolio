@@ -1,5 +1,11 @@
 @import '../../../styles/mixins.scss';
 
 .wrapper {
+
     @include flex(flex, row, wrap, center, center);
+
+    .platform {
+        margin-bottom: $spacing-small;
+    }
+
 }

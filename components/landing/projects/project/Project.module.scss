@@ -19,7 +19,7 @@
 
             padding: $spacing-medium;
             width: 40%;
-            background-color: rgba(14, 24, 38, 0.9);
+            background-color: lighten($color: $color-background, $amount: 5%);
             border-radius: 10px;
             position: absolute;
             left: 0px;

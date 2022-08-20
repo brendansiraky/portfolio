@@ -1,9 +1,8 @@
 import ReactMarkdown from "react-markdown"
 
 import { Project as ProjectType } from '../../../../types/Landing'
-import { Source } from '../../../shared/icons/source/Source'
 import { makeUrl } from '../../../../utility/makeUrl'
-import { Technology } from '../../../shared'
+import { ShadowContainer, Source, Technology } from '../../../shared'
 import styles from './Project.module.scss'
 
 type ProjectProps = ProjectType
@@ -25,10 +24,10 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
             </div>
             <div className={styles.contentWrapper}>
                 <img className={styles.image} alt={alternativeText} src={makeUrl(url)} />
-                <div className={styles.descriptionWrapper}>
+                <ShadowContainer className={styles.descriptionWrapper}>
                     <ReactMarkdown children={long_description} />
                     {sources.map(source => <Source key={source.name} {...source} />)}
-                </div>
+                </ShadowContainer>
             </div>
         </div>
     )

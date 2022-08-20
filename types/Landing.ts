@@ -9,6 +9,7 @@ export type RawLanding = {
             me: Me
             platforms: Platform[]
             projects: Project[]
+            archives: Archive[]
         }
     }
 }
@@ -24,7 +25,7 @@ export type Platform = {
 }
 
 export type Project = {
-    id: string
+    id: number
     name: string
     short_description: string
     long_description: string
@@ -34,13 +35,21 @@ export type Project = {
 }
 
 export type Me = {
-    id: string
+    id: number
     about: string
     technologies: {
         name: string
     }[]
     portrait: Media
     title: string
+}
+
+export type Archive = {
+    id: number
+    name: string
+    description: string
+    technologies: Technology[]
+    sources?: Source[]
 }
 
 export type Technology = {
@@ -51,6 +60,7 @@ export type Technology = {
 }
 
 export type Source = {
+    id: number
     name: string
     link: string
 }

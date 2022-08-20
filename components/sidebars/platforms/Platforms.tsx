@@ -14,9 +14,9 @@ const Platforms: React.FC<PlatformsProps> = () => {
             <div className={styles.wrapper}>
                 <ul>
                     {platforms.map(platform => (
-                        <div key={platform.name}>
+                        <li key={platform.name} className={styles.platform}>
                             <Platform {...platform} />
-                        </div>
+                        </li>
                     ))}
                 </ul>
             </div>
