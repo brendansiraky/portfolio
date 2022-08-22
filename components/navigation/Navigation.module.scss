@@ -6,6 +6,10 @@
     width: 100%;
     padding: 30px 40px;
 
+    @include breakpoint(xs) {
+        padding: 30px 25px;
+    }
+
     .nav {
 
         @include flex(flex, row, wrap, space-between, center);

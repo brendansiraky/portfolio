@@ -1,3 +1,10 @@
+@import '../../../styles/mixins.scss';
+
 .wrapper {
+
     padding: 0px 100px;
+
+    @include breakpoint(sm) {
+        padding: 0 25px;
+    }
 }

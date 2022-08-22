@@ -23,10 +23,12 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
                 </div>
             </div>
             <div className={styles.contentWrapper}>
-                <img className={styles.image} alt={alternativeText} src={makeUrl(url)} />
+                <div className={styles.imageWrapper}>
+                    <img alt={alternativeText} src={makeUrl(url)} />
+                </div>
                 <ShadowContainer className={styles.descriptionWrapper}>
                     <ReactMarkdown children={long_description} />
-                    {sources.map(source => <Source key={source.name} {...source} />)}
+                    {sources.map(source => <div key={source.name} className={styles.sourceWrapper}><Source {...source} /></div>)}
                 </ShadowContainer>
             </div>
         </div>

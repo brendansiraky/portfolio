@@ -8,9 +8,18 @@ $height: calc($width * $ratio);
 
     @include flex(flex, row, wrap, center, center);
 
+    @include breakpoint(md) {
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+    }
+
     .imageWrapper {
 
         margin-right: $spacing-extra-large;
+
+        @include breakpoint(md) {
+            margin-right: 0;
+        }
 
         &:hover {
             .image {
@@ -30,6 +39,11 @@ $height: calc($width * $ratio);
             width: $width;
             height: $height;
             border: 5px solid #010C1B;
+
+            @include breakpoint(xs) {
+                width: calc($width / 2);
+                height: calc($height / 2);
+            }
     
             &:before {
                 content: '';
@@ -41,6 +55,13 @@ $height: calc($width * $ratio);
                 transition: transform $transition-time;
                 width: $width;
                 z-index: -1;
+
+                @include breakpoint(xs) {
+                    width: calc($width / 2);
+                    height: calc($height / 2);
+                    bottom: -$spacing-medium;
+                    left: -$spacing-medium;
+                }
             }
     
         }
@@ -50,6 +71,10 @@ $height: calc($width * $ratio);
     .content {
 
         width: 50%;
+
+        @include breakpoint(md) {
+            width: 100%;
+        }
 
         .separator {
             margin: $spacing-medium 0;
@@ -63,11 +88,19 @@ $height: calc($width * $ratio);
             margin-bottom: $spacing-medium;
         }
 
+        a {
+            color: $color-primary;
+        }
+
         ul {
 
             display: grid;
             grid-template-columns: repeat(3, minmax(140px, 200px));
             margin: -$spacing-small 0 $spacing-medium 0;
+
+            @include breakpoint(sm) {
+                grid-template-columns: repeat(2, minmax(140px, 200px));
+            }
 
             li {
                 &:before {

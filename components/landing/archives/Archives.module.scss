@@ -2,7 +2,7 @@
 
 .wrapper {
 
-    @include flex(flex, row, wrap, center, center);
+    @include flex(flex, column, wrap, center, center);
     min-height: 100vh;
 
     .headingWrapper {

@@ -5,18 +5,30 @@
     @include flex(flex, row, wrap, space-between, center);
     width: 100%;
 
+    @include breakpoint(sm) {
+        justify-content: center;
+    }
+
     .contentWrapper {
 
         @include flex(flex, row, wrap, flex-end, center);
         width: 65%;
         position: relative;
 
-        .image {
-            width: 70%;
+        @include breakpoint(sm) {
+            margin-top: $spacing-medium;
+        }
+
+        
+        .imageWrapper {
+            width: 80%;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .descriptionWrapper {
 
+            @include flex(flex, row, wrap, flex-end, flex-end);
             padding: $spacing-medium;
             width: 40%;
             background-color: lighten($color: $color-background, $amount: 5%);
@@ -25,9 +37,28 @@
             left: 0px;
             text-align: right;
 
+            @include breakpoint(sm) {
+                width: 100%;
+                background-color: rgba(3, 12, 27, 0.9);
+            }
+
             p {
                 margin-bottom: $spacing-small;
                 font-size: 16px;
+            }
+
+            a {
+                color: $color-primary;
+            }
+
+            .sourceWrapper {
+
+                margin-right: $spacing-small;
+
+                &:last-child {
+                    margin: 0;
+                }
+
             }
 
         }
@@ -40,8 +71,14 @@
         @include flex(flex, column, wrap, flex-end, flex-end);
         text-align: right;
 
+        @include breakpoint(sm) {
+            width: 100%;
+            @include flex(flex, column, wrap, center, center);
+        }
+
         h1 {
             margin: $spacing-small 0 $spacing-medium 0;
+            font-size: 60px;
         }
 
         h2 {
@@ -59,6 +96,7 @@
         }
 
         .technologiesWrapper > * {
+            
             margin-right: $spacing-small;
 
             &:last-child {

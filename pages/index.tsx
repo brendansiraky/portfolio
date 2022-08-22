@@ -22,7 +22,7 @@ const Landing: NextPage<Landing> = (landing) => {
                 <Hero />
                 <Me />
                 <Projects />
-                <Archives />
+                {/* <Archives /> */}
             </Layout>
         </LandingContext.Provider>
     )

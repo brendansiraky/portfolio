@@ -7,6 +7,10 @@ $distance-from-edge: 35px;
     position: fixed;
     bottom: 0px;
 
+    @include breakpoint(sm) {
+        display: none !important;
+    }
+
     &.right {
         right: $distance-from-edge;
     }

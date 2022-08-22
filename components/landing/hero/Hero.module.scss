@@ -2,7 +2,7 @@
 
 .wrapper {
 
-    @include flex(flex, column, wrap, center, center);
+    @include flex(flex, column, nowrap, center, center);
     min-height: 100vh;
     padding: 0;
 
@@ -24,16 +24,41 @@
             }
     
         }
-    
+
         h1 {
             font-size: 120px;
             margin: $spacing-small 0;
             text-transform: uppercase;
-
         }
     
         h2 {
             font-size: 36px;
+        }
+
+        @include breakpoint(sm) {
+
+            h1 {
+                font-size: 80px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+        }
+
+        @include breakpoint(xs) {
+
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            font-size: 14px;
+
         }
 
         .build {
