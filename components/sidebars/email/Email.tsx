@@ -8,9 +8,11 @@ import styles from './Email.module.scss'
 const Email: React.FC<{}> = () => {
     const { email } = useContext(GlobalContext)
 
+    const handleClick = () => window.open(`mailto:${email}`)
+
     return (
         <Container position="right" animationType="fade-left">
-            <span className={styles.text}>{email}</span>
+            <span onClick={handleClick} className={styles.text}>{email}</span>
         </Container>
     )
 }

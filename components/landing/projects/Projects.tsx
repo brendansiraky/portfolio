@@ -16,7 +16,7 @@ const Projects: React.FC<{}> = () => {
     if (!showContent) return null
 
     return (
-        <section className={styles.wrapper}>
+        <section data-aos="fade-up" data-aos-offset="300" className={styles.wrapper}>
             {
                 isDevice
                     ?   projects.map(project => <div key={project.name} className={styles.mobileProjectWrapper}><Project {...project} /></div>)

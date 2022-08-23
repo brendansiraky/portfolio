@@ -11,7 +11,7 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
     const { data: { attributes: { url, alternativeText } } } = image
 
     return (
-        <div data-aos="fade-up" className={styles.wrapper}>
+        <div className={styles.wrapper}>
             <div className={styles.titleWrapper}>
                 <h2>Featured Project</h2>
                 <h1>{name}</h1>

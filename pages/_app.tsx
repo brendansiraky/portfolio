@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps<Global>) {
         AOS.init({
             easing: "ease-out-cubic",
             once: true,
-            offset: 150,
+            offset: 0,
         })
     }, [])
 
