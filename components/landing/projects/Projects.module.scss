@@ -6,6 +6,14 @@
     position: relative;
     min-height: 100vh;
 
+    .mobileProjectWrapper {
+        margin-bottom: $spacing-extra-large;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
     .navWrapper {
 
         @include flex(flex, row, wrap, center, center);

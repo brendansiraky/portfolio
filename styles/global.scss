@@ -6,6 +6,9 @@
 @import './text.scss';
 @import './base.scss';
 
+$aos-distance: 25px;
+@import 'aos/src/sass/aos.scss';
+
 #fp-nav ul li a.active span {
     background-color: #fff !important;
 }

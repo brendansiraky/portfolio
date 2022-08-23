@@ -9,11 +9,11 @@ const Me: React.FC<{}> = () => {
     const { me: { about, technologies, portrait, title } } = useContext(LandingContext)
 
     return (
-        <section className={styles.wrapper}>
-            <div className={styles.imageWrapper}>
+        <section  className={styles.wrapper}>
+            <div data-aos="fade-right" className={styles.imageWrapper}>
                 <div className={styles.image} style={{ backgroundImage: `url('${makeUrl(portrait.data.attributes.url)}')` }} />
             </div>
-            <div className={styles.content}>
+            <div data-aos="fade-up" className={styles.content}>
                 <h2>{title}</h2>
                 <div className={styles.separator} />
                 <ReactMarkdown children={about} />

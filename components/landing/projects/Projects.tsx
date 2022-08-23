@@ -1,17 +1,28 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useFixHydration } from '../../../hooks/useFixHydration'
+import useIsMounted from '../../../hooks/useIsMounted'
 
+import { useMediaQuery } from '../../../hooks/useMediaQuery'
 import { LandingContext } from '../../../model/context/LandingContext'
 import { Project } from './project/Project'
 import styles from './Projects.module.scss'
 
 const Projects: React.FC<{}> = () => {
-    const { projects } = useContext(LandingContext)
     const [focusedIndex, setFocusedIndex] = useState(0)
+    const { projects } = useContext(LandingContext)
+    const isDevice = useMediaQuery('(max-width: 767px)')
+    const showContent = useFixHydration()
+
+    if (!showContent) return null
 
     return (
         <section className={styles.wrapper}>
-            <Project {...projects[focusedIndex]} />
-            <div className={styles.navWrapper}>
+            {
+                isDevice
+                    ?   projects.map(project => <div key={project.name} className={styles.mobileProjectWrapper}><Project {...project} /></div>)
+                    :   <Project {...projects[focusedIndex]} />
+            }
+            {   !isDevice && <div className={styles.navWrapper}>
                 {projects.map(({ name }, index) => (
                     <div 
                         key={name} 
@@ -19,7 +30,7 @@ const Projects: React.FC<{}> = () => {
                         onClick={() => setFocusedIndex(index)}
                     />
                 ))}
-            </div>
+            </div>}
         </section>
     )
 }

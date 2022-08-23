@@ -28,7 +28,13 @@ main {
 }
 
 ul {
+
 	@include list-reset;
+
+	li {
+		font-size: 16px;
+	}
+
 }
 
 figure {

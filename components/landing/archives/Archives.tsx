@@ -18,15 +18,13 @@ const Archives = () => {
     }
 
     return (
-        <section className={styles.wrapper}>
+        <section data-aos="fade-up" data-aos-delay="300" className={styles.wrapper}>
             <div className={styles.headingWrapper}>
                 <h2>Other Noteable Projects</h2>
                 <div className={styles.separator} />
             </div>
             <ul>
-                {visibleArchives.map(item => (
-                    <Project key={item.name} {...item} />
-                ))}
+            {visibleArchives.map(item => <Project key={item.name} {...item} />)}
             </ul>
             <div className={styles.buttonWrapper}>
                 {archives.length === visibleArchives.length

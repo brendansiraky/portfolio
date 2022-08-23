@@ -11,7 +11,7 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
     const { data: { attributes: { url, alternativeText } } } = image
 
     return (
-        <div className={styles.wrapper}>
+        <div data-aos="fade-up" className={styles.wrapper}>
             <div className={styles.titleWrapper}>
                 <h2>Featured Project</h2>
                 <h1>{name}</h1>
@@ -28,7 +28,9 @@ export const Project: React.FC<ProjectProps> = ({ name, short_description, long_
                 </div>
                 <ShadowContainer className={styles.descriptionWrapper}>
                     <ReactMarkdown children={long_description} />
-                    {sources.map(source => <div key={source.name} className={styles.sourceWrapper}><Source {...source} /></div>)}
+                    <div className={styles.sourcesWrapper}>
+                        {sources.map(source => <div key={source.name} className={styles.sourceWrapper}><Source {...source} /></div>)}
+                    </div>
                 </ShadowContainer>
             </div>
         </div>

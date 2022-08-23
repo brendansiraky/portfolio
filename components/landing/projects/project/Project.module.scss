@@ -16,14 +16,21 @@
         position: relative;
 
         @include breakpoint(sm) {
-            margin-top: $spacing-medium;
+            margin-top: $spacing-large;
+            justify-content: center;
+            width: 100%;
         }
 
-        
         .imageWrapper {
+            
             width: 80%;
             border-radius: 10px;
             overflow: hidden;
+
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+
         }
 
         .descriptionWrapper {
@@ -37,29 +44,44 @@
             left: 0px;
             text-align: right;
 
+            @include breakpoint(md) {
+                width: 60%;
+                left: 40px;
+            }
+
             @include breakpoint(sm) {
                 width: 100%;
-                background-color: rgba(3, 12, 27, 0.9);
+                background-color: rgba(3, 12, 27, 0.8);
+                left: auto;
+                top: 0%;
+                @include flex(flex, column, nowrap, center, flex-end);
+                height: 100%;
             }
 
             p {
                 margin-bottom: $spacing-small;
-                font-size: 16px;
             }
 
             a {
                 color: $color-primary;
             }
 
-            .sourceWrapper {
+            .sourcesWrapper {
 
-                margin-right: $spacing-small;
+                @include flex(flex, row, wrap, flex-end, flex-end);
 
-                &:last-child {
-                    margin: 0;
+                .sourceWrapper {
+    
+                    margin-right: $spacing-small;
+    
+                    &:last-child {
+                        margin: 0;
+                    }
+    
                 }
 
             }
+
 
         }
 
@@ -71,11 +93,6 @@
         @include flex(flex, column, wrap, flex-end, flex-end);
         text-align: right;
 
-        @include breakpoint(sm) {
-            width: 100%;
-            @include flex(flex, column, wrap, center, center);
-        }
-
         h1 {
             margin: $spacing-small 0 $spacing-medium 0;
             font-size: 60px;
@@ -86,8 +103,25 @@
             font-size: 22px;
         }
 
+        @include breakpoint(sm) {
+
+            width: 100%;
+            @include flex(flex, column, wrap, center, center);
+            text-align: center;
+
+            h1 {
+                font-size: 50px;
+            }
+
+        }
+
         .description {
+
             max-width: 80%;
+
+            @include breakpoint(sm) {
+                max-width: 100%;
+            }
         }
 
         .technologiesWrapper {

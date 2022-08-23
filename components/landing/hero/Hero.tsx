@@ -11,12 +11,12 @@ const Hero: React.FC<{}> = () => {
     return (
         <section className={styles.wrapper}>
             <div className={styles.innerWrapper}>
-                <div className={styles.intro}>
+                <div data-aos="fade-down" data-aos-delay="300" className={styles.intro}>
                     <h2>HI I'M</h2>
                     <div className={styles.line} />
                 </div>
-                <h1>{name}</h1>
-                <div className={styles.build}>I BUILD <span><ReactMarkdown children={build}/></span></div>
+                <h1 data-aos="fade-down" data-aos-delay="300" >{name}</h1>
+                <div data-aos="fade-up" data-aos-delay="400" className={styles.build}>I BUILD <span><ReactMarkdown children={build}/></span></div>
             </div>
         </section>
     )

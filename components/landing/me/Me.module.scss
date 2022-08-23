@@ -18,7 +18,7 @@ $height: calc($width * $ratio);
         margin-right: $spacing-extra-large;
 
         @include breakpoint(md) {
-            margin-right: 0;
+            margin: $spacing-medium 0 0 0;
         }
 
         &:hover {

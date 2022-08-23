@@ -9,7 +9,7 @@ const Email: React.FC<{}> = () => {
     const { email } = useContext(GlobalContext)
 
     return (
-        <Container position='right'>
+        <Container position="right" animationType="fade-left">
             <span className={styles.text}>{email}</span>
         </Container>
     )

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import { GlobalContext } from '../../model/context/GlobalContext'
 import { makeUrl } from '../../utility/makeUrl'
@@ -8,7 +8,7 @@ export const Navigation: React.FC<{}> = () => {
     const { logo } = useContext(GlobalContext)
 
     return (
-        <header className={styles.wrapper}>
+        <header data-aos="fade-up" className={styles.wrapper}>
             <nav className={styles.nav}>
                 <img src={makeUrl(logo.data.attributes.url)} className={styles.logo} />
             </nav>
