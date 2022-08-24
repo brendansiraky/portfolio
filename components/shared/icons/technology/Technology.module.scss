@@ -1,8 +1,84 @@
 @import '../../../../styles/mixins.scss';
 
-.image {
-    background-size: contain;
-    background-repeat: no-repeat;
+.icon {
+
     height: 30px;
     width: 30px;
+
+    &.react {
+        @include background-image(react-js-logo, png, contain, center, no-repeat);
+    }
+    
+    &.typescript {
+        @include background-image(typescript-logo, png, contain, center, no-repeat);
+    }
+    
+    &.easy-peasy {
+        @include background-image(easy-peasy-logo, png, contain, center, no-repeat);
+    }
+
+    &.nodejs {
+        @include background-image(node-js-logo, png, contain, center, no-repeat);
+    }
+
+    &.nestjs {
+        @include background-image(nest-js-logo, png, contain, center, no-repeat);
+    }
+
+    &.nextjs {
+        @include background-image(next-js-logo, png, contain, center, no-repeat);
+    }
+
+    &.blockfrost {
+        @include background-image(blockfrost, svg, contain, center, no-repeat);
+    }
+
+    &.postgres {
+        @include background-image(postgres-logo, png, contain, center, no-repeat);
+    }
+
+    &.knex {
+        @include background-image(knex-logo, png, contain, center, no-repeat);
+    }
+
+    &.alchemy {
+        @include background-image(alchemy-logo, png, contain, center, no-repeat);
+    }
+
+    &.discordjs {
+        @include background-image(discord-circle, png, contain, center, no-repeat);
+    }
+
+    &.twitter-api {
+        @include background-image(twitter-circle, png, contain, center, no-repeat);
+    }
+
+    &.solidity {
+        @include background-image(solidity-logo, svg, contain, center, no-repeat);
+    }
+
+    &.shopify {
+        @include background-image(shopify-logo, png, contain, center, no-repeat);
+    }
+
+    &.docker {
+        @include background-image(docker-logo, png, contain, center, no-repeat);
+    }
+
+    &.laravel {
+        @include background-image(laravel-logo, png, contain, center, no-repeat);
+    }
+
+    &.strapi {
+        @include background-image(strapi-logo, png, contain, center, no-repeat);
+    }
+
+    &.expo {
+        @include background-image(expo-logo-svg, svg, contain, center, no-repeat);
+    }
+
+    &.react-native {
+        @include background-image(react-js-logo, png, contain, center, no-repeat);
+    }
+
 }

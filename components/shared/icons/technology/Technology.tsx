@@ -5,10 +5,10 @@ import styles from './Technology.module.scss'
 
 type TechnologyProps = Technology
 
-const Technology: React.FC<TechnologyProps> = ({ link, logo: { data: { attributes: { url } } } }) => {
+const Technology: React.FC<TechnologyProps> = ({ link, name }) => {
     return (
         <ExternalLink href={link}>
-            <div className={styles.image} style={{ backgroundImage: `url('${makeUrl(url)}')` }} />
+            <div className={`${styles.icon} ${styles[name]}`} />
         </ExternalLink>
     )
 }

@@ -16,10 +16,31 @@
         @include flex(flex, row, wrap, space-between, center);
 
         .logo {
-            background-repeat: no-repeat;
-            background-size: contain;
+            @include background-image(logo, svg, contain, center, no-repeat);
             width: 35px;
             height: 46px;
+        }
+
+        .platformsWrapper {
+
+            visibility: hidden;
+            
+            @include breakpoint(sm) {
+                visibility: visible;
+            }
+
+            @include flex(flex, row, wrap, space-between, center);
+
+            .platformWrapper {
+
+                margin-right: $spacing-small;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+            }
+            
         }
 
         ul {

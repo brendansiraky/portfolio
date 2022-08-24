@@ -8,8 +8,8 @@ const nextConfig = {
     },
     env: {
         FULLPAGE_LICENSE_KEY: process.env.FULLPAGE_LICENSE_KEY,
-        BACKEND_ENDPOINT: process.env.BACKEND_ENDPOINT,
-        BACKEND_PORT: process.env.BACKEND_PORT
+        NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
+        NEXT_PUBLIC_STRAPI_API_PORT: process.env.NEXT_PUBLIC_STRAPI_API_PORT
     }
 }
 

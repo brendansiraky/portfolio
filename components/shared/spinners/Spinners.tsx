@@ -1,4 +1,3 @@
-import { EasyPeasyImage, ReactImage } from '../../landing/projects/table/ProjectRow'
 import styles from './Spinners.module.scss'
 
 const SPINNER_DIMENSION = 35
@@ -38,23 +37,5 @@ const SpinnerContainer: React.FC<SpinnerContainerProps> = ({ text, img, cx = SPI
                 </div>
             </div>
         </div>
-    )
-}
-
-export const ReactSpinner = () => {
-    return (
-        <SpinnerContainer
-            text="ReactJs - ReactJs - ReactJs - ReactJs"
-            img={<ReactImage />}
-        />
-    )
-}
-
-export const EasyPeasySpinner = () => {
-    return (
-        <SpinnerContainer
-            text="Easy Peasy - Easy Peasy - Easy Peasy"
-            img={<EasyPeasyImage />}
-        />
     )
 }

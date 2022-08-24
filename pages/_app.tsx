@@ -47,4 +47,6 @@ export default MyApp
     - Change all logos to svg's on backend.
     - makeUrl function should be used in the mappers not in the components themselves.
     - Wrap all animations in an Animation component that tacks on the data- attribute.
+    - Move images to strapi and setup nginx server for backend.
+    - Remove grid.
 */

@@ -32,6 +32,7 @@ export type Project = {
     technologies: Technology[]
     sources: Source[]
     image: Media
+    label: string
 }
 
 export type Me = {
@@ -57,6 +58,7 @@ export type Technology = {
     name: string
     link: string
     logo: Media
+    label: string
 }
 
 export type Source = {

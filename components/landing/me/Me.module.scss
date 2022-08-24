@@ -32,9 +32,7 @@ $height: calc($width * $ratio);
         .image {
 
             position: relative;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            @include background-image(me, jpg, contain, center, no-repeat);
             border-radius: 5px;
             width: $width;
             height: $height;

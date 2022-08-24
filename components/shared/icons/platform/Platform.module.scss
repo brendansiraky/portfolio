@@ -1,8 +1,16 @@
 @import '../../../../styles/mixins.scss';
 
-.image {
-    background-size: contain;
-    background-repeat: no-repeat;
+.icon {
+
     height: 25px;
     width: 25px;
+
+    &.github {
+        @include background-image(github-logo, svg, contain, center, no-repeat);
+    }
+    
+    &.linkedin {
+        @include background-image(linkedin-logo, svg, contain, center, no-repeat);
+    }
+
 }

@@ -1,14 +1,14 @@
 import { Platform } from '../../../../types/Landing'
-import { makeUrl } from '../../../../utility/makeUrl'
 import ExternalLink from '../../link/externalLink/ExternalLink'
 import styles from './Platform.module.scss'
 
 type PlatformProps = Platform
 
-const Platform: React.FC<PlatformProps> = ({ link, logo: { data: { attributes: { url } } } }) => {
+const Platform: React.FC<PlatformProps> = ({ link, name }) => {
+
     return (
         <ExternalLink href={link}>
-            <div className={styles.image} style={{ backgroundImage: `url('${makeUrl(url)}')` }} />
+            <div className={`${styles.icon} ${styles[name]}`} />
         </ExternalLink>
     )
 }

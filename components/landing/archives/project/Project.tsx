@@ -24,7 +24,9 @@ export const Project: React.FC<ProjectProps> = ({ name, description, technologie
                         <h3>{name}</h3>
                     </div>
                     <div className={styles.descriptionWrapper}>
-                        <ReactMarkdown children={description} />
+                        <ReactMarkdown>
+                            {description}
+                        </ReactMarkdown>
                     </div>
                 </div>
                 <div className={styles.technologiesWrapper}>
