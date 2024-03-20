@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 
-import App from 'next/app'
-import type { AppProps, AppContext } from 'next/app'
+import type { AppProps } from 'next/app'
 import AOS from 'aos'
 
 import { GlobalContext } from '../model/context/GlobalContext'
