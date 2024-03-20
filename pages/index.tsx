@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { Hero, Me, Projects, Archives } from '../components/landing'
 import { LandingContext } from '../model/context/LandingContext'
-import { Layout } from '../components/shared'
+import Layout from '../components/shared/layout/Layout'
 import { landing } from '../content/landing'
 
 const Landing: NextPage = () => {
