@@ -5,40 +5,36 @@ import type { AppProps, AppContext } from 'next/app'
 import AOS from 'aos'
 
 import { GlobalContext } from '../model/context/GlobalContext'
-import { fetchGlobal } from '../api/fetchGlobal'
-import { Global } from '../types/Global'
-import 'aos/dist/aos.css'
+import { global, Global } from '../content/global'
 import '../styles/global.scss'
+import 'aos/dist/aos.css'
 
 function MyApp({ Component, pageProps }: AppProps<Global>) {
+	useEffect(() => {
+		AOS.init({
+			easing: 'ease-out-cubic',
+			once: true,
+			offset: 0,
+		})
+	}, [])
 
-    useEffect(() => {
-        AOS.init({
-            easing: "ease-out-cubic",
-            once: true,
-            offset: 0,
-        })
-    }, [])
-
-    return (
-        <GlobalContext.Provider value={pageProps.global}>
-            <Component {...pageProps} />
-        </GlobalContext.Provider>
-    )
+	return (
+		<GlobalContext.Provider value={global}>
+			<Component {...pageProps} />
+		</GlobalContext.Provider>
+	)
 }
 
 MyApp.getInitialProps = async (ctx: AppContext) => {
-    const appProps = await App.getInitialProps(ctx)
-    const global = await fetchGlobal()
+	const appProps = await App.getInitialProps(ctx)
 
-    return { 
-        ...appProps,
-        pageProps: { global }
-    }
+	return {
+		...appProps,
+		pageProps: {},
+	}
 }
 
 export default MyApp
-
 
 /*
     TODO:

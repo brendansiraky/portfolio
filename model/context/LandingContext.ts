@@ -1,5 +1,5 @@
 import { createContext } from 'react'
 
-import { Landing as LandingStoreContext } from '../../types/Landing'
+import { Landing } from '../../content/landing'
 
-export const LandingContext = createContext<LandingStoreContext>(null as any)
+export const LandingContext = createContext<Landing>(null as any)

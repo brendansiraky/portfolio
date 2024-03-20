@@ -54,6 +54,14 @@
                     @include background-image(discord-twitter-tracker-screenshot, png, contain, center, no-repeat);
                 }
 
+                &.arbitrage-scanner-screenshot {
+                    @include background-image(arbitrage-scanner-screenshot, png, contain, center, no-repeat);
+                }
+
+                &.blockframe-screenshot {
+                    @include background-image(blockframe-screenshot, png, contain, center, no-repeat);
+                }
+
             }
 
         }
@@ -117,9 +125,9 @@
         width: 30%;
         @include flex(flex, column, wrap, flex-end, flex-end);
         text-align: right;
+        gap: $spacing-medium;
 
         h1 {
-            margin: $spacing-small 0 $spacing-medium 0;
             font-size: 60px;
         }
 
@@ -151,16 +159,7 @@
 
         .technologiesWrapper {
             @include flex(flex, row, wrap, flex-end, flex-end);
-            margin-top: $spacing-medium;
-        }
-
-        .technologiesWrapper > * {
-            
-            margin-right: $spacing-small;
-
-            &:last-child {
-                margin-right: 0;
-            }
+            gap: $spacing-small;
         }
 
     }

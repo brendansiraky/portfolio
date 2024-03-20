@@ -30,17 +30,8 @@
             }
 
             @include flex(flex, row, wrap, space-between, center);
+            gap: $spacing-small;
 
-            .platformWrapper {
-
-                margin-right: $spacing-small;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-            }
-            
         }
 
         ul {

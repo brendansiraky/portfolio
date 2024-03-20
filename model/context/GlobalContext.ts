@@ -1,5 +1,4 @@
 import { createContext } from 'react'
+import { Global } from '../../content/global'
 
-import { Global as GlobalStoreContext } from '../../types/Global'
-
-export const GlobalContext = createContext<GlobalStoreContext>(null as any)
+export const GlobalContext = createContext<Global>(null as any)

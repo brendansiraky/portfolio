@@ -1,6 +1,5 @@
-export { default as SquareButton } from './button/SquareButton'
-export { default as Layout } from './layout/Layout'
-export { default as Footer } from './footer/Footer'
+export { default as SquareButton } from './Button/SquareButton'
+export { default as Layout } from './Layout/Layout'
 export { default as ExternalLink } from './link/externalLink/ExternalLink'
 export { default as Source } from './icons/source/Source'
 export { default as Platform } from './icons/platform/Platform'

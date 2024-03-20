@@ -1,22 +1,20 @@
 import { Navigation } from '../../navigation/Navigation'
 import { Email, Platforms } from '../../sidebars'
-import Footer from '../footer/Footer'
 import styles from './Layout.module.scss'
 
 type LayoutProps = {
-    children: React.ReactNode
+	children: React.ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-    return (
-        <main className={styles.wrapper}>
-            {children}
-            <Navigation />
-            <Email />
-            <Platforms />
-            <Footer />
-        </main>
-    )
+	return (
+		<main className={styles.wrapper}>
+			{children}
+			<Navigation />
+			<Email />
+			<Platforms />
+		</main>
+	)
 }
 
 export default Layout

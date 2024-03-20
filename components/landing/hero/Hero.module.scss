@@ -9,6 +9,9 @@
     .innerWrapper {
 
         text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-small;
 
         .intro {
     
@@ -27,7 +30,6 @@
 
         h1 {
             font-size: 120px;
-            margin: $spacing-small 0;
             text-transform: uppercase;
         }
     

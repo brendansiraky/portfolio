@@ -81,4 +81,8 @@
         @include background-image(react-js-logo, png, contain, center, no-repeat);
     }
 
+    &.web3 {
+        @include background-image(web3, png, contain, center, no-repeat);
+    }
+
 }
