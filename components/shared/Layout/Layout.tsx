@@ -1,5 +1,6 @@
+import Platforms from '../../sidebars/platforms/Platforms'
 import { Navigation } from '../../navigation/Navigation'
-import { Email, Platforms } from '../../sidebars'
+import Email from '../../sidebars/email/Email'
 import styles from './Layout.module.scss'
 
 type LayoutProps = {
