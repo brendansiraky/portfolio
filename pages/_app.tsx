@@ -25,15 +25,6 @@ function MyApp({ Component, pageProps }: AppProps<Global>) {
 	)
 }
 
-MyApp.getInitialProps = async (ctx: AppContext) => {
-	const appProps = await App.getInitialProps(ctx)
-
-	return {
-		...appProps,
-		pageProps: {},
-	}
-}
-
 export default MyApp
 
 /*
