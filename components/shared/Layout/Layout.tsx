@@ -1,15 +1,15 @@
 // import Platforms from '../../sidebars/platforms/Platforms'
 // import { Navigation } from '../../navigation/Navigation'
 // import Email from '../../sidebars/email/Email'
-import styles from './Layout.module.scss'
+// import styles from './Layout.module.scss'
 
 type LayoutProps = {
 	children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
-		<main className={styles.wrapper}>
+		<main>
 			{children}
 			{/* <Navigation />
 			<Email />
@@ -17,5 +17,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		</main>
 	)
 }
-
-export default Layout
