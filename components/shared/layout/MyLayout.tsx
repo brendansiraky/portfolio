@@ -1,15 +1,15 @@
 // import Platforms from '../../sidebars/platforms/Platforms'
 // import { Navigation } from '../../navigation/Navigation'
 // import Email from '../../sidebars/email/Email'
-// import styles from './Layout.module.scss'
+import styles from './Layout.module.scss'
 
 type LayoutProps = {
 	children: React.ReactNode
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const MyLayout: React.FC<LayoutProps> = ({ children }) => {
 	return (
-		<main>
+		<main className={styles.wrapper}>
 			{children}
 			{/* <Navigation />
 			<Email />

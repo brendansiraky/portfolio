@@ -3,13 +3,14 @@ import Head from 'next/head'
 
 import { Hero, Me, Projects, Archives } from '../components/landing'
 import { LandingContext } from '../model/context/LandingContext'
-import { Layout } from '../components/shared/layout/Layout'
+
 import { landing } from '../content/landing'
+import { MyLayout } from '../components/shared/layout/MyLayout'
 
 const Landing: NextPage = () => {
 	return (
 		<LandingContext.Provider value={landing}>
-			<Layout>
+			<MyLayout>
 				<Head>
 					<title>Brendan Hemat-Siraky | Portfoilio</title>
 					<meta
@@ -23,7 +24,7 @@ const Landing: NextPage = () => {
 				<Me />
 				<Projects />
 				<Archives />
-			</Layout>
+			</MyLayout>
 		</LandingContext.Provider>
 	)
 }
