@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import { LandingContext } from '../../model/context/LandingContext'
-import { Platform } from '../shared'
+import { Platform } from '../shared/icons/platform/Platform'
 import styles from './Navigation.module.scss'
 
 export const Navigation: React.FC<{}> = () => {

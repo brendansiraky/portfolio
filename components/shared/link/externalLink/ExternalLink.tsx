@@ -1,6 +1,6 @@
 import styles from './ExternalLink.module.scss'
 
-const ExternalLink: React.FC<{
+export const ExternalLink: React.FC<{
 	href: string
 	children: JSX.Element | string
 }> = ({ href, children }) => {
@@ -10,5 +10,3 @@ const ExternalLink: React.FC<{
 		</a>
 	)
 }
-
-export default ExternalLink

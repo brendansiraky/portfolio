@@ -6,7 +6,7 @@ type LayoutProps = {
 	children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<main className={styles.wrapper}>
 			{children}
@@ -16,5 +16,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		</main>
 	)
 }
-
-export default Layout

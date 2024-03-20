@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import { LandingContext } from '../../../model/context/LandingContext'
-import { Platform } from '../../shared'
+import { Platform } from '../../shared/icons/platform/Platform'
 import { Container } from '../container/Container'
 import styles from './Platforms.module.scss'
 

@@ -1,4 +1,6 @@
-import { ShadowContainer, Source, Technology } from '../../../shared'
+import { ShadowContainer } from '../../../shared/shadowContainer/ShadowContainer'
+import { Technology } from '../../../shared/icons/technology/Technology'
+import { Source } from '../../../shared/icons/source/Source'
 import { Projects } from '../../../../content/landing'
 import styles from './Project.module.scss'
 

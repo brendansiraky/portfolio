@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { useArchivedProjects } from '../../../hooks/useArchivedProjects'
+import { SquareButton } from '../../shared/Button/SquareButton'
 import { Project } from './project/Project'
-import { SquareButton } from '../../shared'
 import styles from './Archives.module.scss'
 
 const Archives = () => {

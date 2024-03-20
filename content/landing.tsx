@@ -1,4 +1,4 @@
-import { ExternalLink } from '../components/shared'
+import { ExternalLink } from '../components/shared/link/externalLink/ExternalLink'
 import { LINKS } from '../constants/links'
 
 export const landing = {
@@ -636,3 +636,4 @@ export type Landing = typeof landing
 export type Projects = Landing['projects']
 export type Technologies = Landing['projects'][number]['technologies']
 export type Sources = Landing['projects'][number]['sources']
+export type Platforms = Landing['platforms']
