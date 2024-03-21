@@ -255,6 +255,10 @@ export const landing = {
 					name: 'web3',
 					link: LINKS.WEB3,
 				},
+				{
+					name: 'solidity',
+					link: LINKS.SOLIDITY,
+				},
 			],
 			sources: [
 				{

@@ -32,15 +32,14 @@ $height: calc($width * $ratio);
         .image {
 
             position: relative;
-            @include background-image(me, jpg, contain, center, no-repeat);
+            @include background-image(me-1, jpg, cover, center, no-repeat);
             border-radius: 5px;
             width: $width;
             height: $height;
-            border: 5px solid #010C1B;
 
             @include breakpoint(xs) {
-                width: calc($width / 2);
-                height: calc($height / 2);
+                width: calc($width / 1.25);
+                height: calc($height / 1.25);
             }
     
             &:before {
@@ -55,10 +54,10 @@ $height: calc($width * $ratio);
                 z-index: -1;
 
                 @include breakpoint(xs) {
-                    width: calc($width / 2);
-                    height: calc($height / 2);
-                    bottom: -$spacing-medium;
-                    left: -$spacing-medium;
+                    width: calc($width / 1.25);
+                    height: calc($height / 1.25);
+                    bottom: -$spacing-large;
+                    left: -$spacing-large;
                 }
             }
     
