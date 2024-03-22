@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 import { useFeaturedProjects } from '../../../hooks/useFeaturedProjects'
-import { useMediaQuery } from '../../../hooks/useMediaQuery'
 import { Mobile } from './project/mobile/Mobile'
 import { Desktop } from './project/desktop/Desktop'
 import styles from './Featured.module.scss'
@@ -18,7 +17,7 @@ const Featured: React.FC<{}> = () => {
 		>
 			<div className={styles.mobileFeaturedWrapper}>
 				{projects.map((project) => (
-					<Mobile {...project} />
+					<Mobile key={project.name} {...project} />
 				))}
 			</div>
 
