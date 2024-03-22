@@ -1,17 +1,33 @@
 @import '../../../styles/mixins.scss';
 
+
+
 .wrapper {
 
     @include flex(flex, row, wrap, center, center);
     position: relative;
     min-height: 100vh;
 
-    .mobileProjectWrapper {
-        margin-bottom: $spacing-extra-large;
-
-        &:last-child {
-            margin: 0;
+    .featuredWrapper {
+        width: 100%;
+        @include breakpoint(md) {
+            visibility: hidden;
+            display: none;
         }
+    }
+
+    .mobileFeaturedWrapper {
+        
+        @include breakpoint(md) {
+            visibility: visible;
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-extra-large;
+        }
+
+        visibility: hidden;
+        display: none;
     }
 
     .navWrapper {
@@ -19,6 +35,7 @@
         @include flex(flex, row, wrap, center, center);
         position: absolute;
         bottom: 15%;
+        width: 100%;
 
         .navItem {
 

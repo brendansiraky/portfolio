@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { LandingLayout } from '../components/shared/layout/LandingLayout'
-import { Hero, Me, Projects, Archives } from '../components/landing'
+import { Hero, Me, Featured, Archives } from '../components/landing'
 import { LandingContext } from '../model/context/LandingContext'
 import { landing } from '../content/landing'
 
@@ -18,10 +18,9 @@ const Landing: NextPage = () => {
 					/>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-
 				<Hero />
 				<Me />
-				<Projects />
+				<Featured />
 				<Archives />
 			</LandingLayout>
 		</LandingContext.Provider>

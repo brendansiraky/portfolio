@@ -1,18 +1,20 @@
-import { ShadowContainer } from '../../../shared/shadowContainer/ShadowContainer'
-import { Technology } from '../../../shared/icons/technology/Technology'
-import { Source } from '../../../shared/icons/source/Source'
-import { Projects } from '../../../../content/landing'
-import styles from './Project.module.scss'
+import React from 'react'
 
-type ProjectProps = Projects[number]
+import { ShadowContainer } from '../../../../shared/shadowContainer/ShadowContainer'
+import { Technology } from '../../../../shared/icons/technology/Technology'
+import { Source } from '../../../../shared/icons/source/Source'
+import { Projects } from '../../../../../content/landing'
+import styles from './Desktop.module.scss'
 
-export const Project: React.FC<ProjectProps> = ({
+type DesktopProps = Projects[number]
+export const Desktop: React.FC<DesktopProps> = ({
 	name,
 	label,
 	short_description,
 	long_description,
 	technologies,
 	sources,
+	img,
 }) => {
 	return (
 		<div className={styles.wrapper}>
@@ -30,7 +32,10 @@ export const Project: React.FC<ProjectProps> = ({
 			</div>
 			<div className={styles.contentWrapper}>
 				<div className={styles.imageWrapper}>
-					<div className={`${styles.image} ${styles[name]}`} />
+					<div
+						className={`${styles.image}`}
+						style={{ backgroundImage: `url(${img?.src})` }}
+					/>
 				</div>
 				<ShadowContainer className={styles.descriptionWrapper}>
 					{long_description}

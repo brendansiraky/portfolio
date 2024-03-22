@@ -1,0 +1,59 @@
+@import '../../../../../styles/mixins.scss';
+
+
+.mobileFeatured {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-medium;
+    position: relative;
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        color: $color-primary;
+        font-size: 22px;
+    }
+
+    .descriptionWrapper {
+        
+    }
+
+    .iconsWrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: $spacing-small;
+        align-items: center;
+        
+        @include breakpoint(sm) {
+            justify-content: space-between;
+        }
+
+    }
+
+    .technologiesWrapper {
+        display: flex;
+        gap: $spacing-small;
+    }
+    
+    .sourcesWrapper {
+        display: flex;
+        gap: $spacing-small;
+
+    }
+
+    .imageWrapper {
+
+        z-index: -1;
+        opacity: 0.3;
+      
+        .image {
+          object-fit: contain;
+        }
+    }
+
+}

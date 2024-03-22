@@ -2,12 +2,12 @@
 
 .github {
     @include background-image(github-logo, svg, contain, center, no-repeat);
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 .website {
     @include background-image(website-link, svg, contain, center, no-repeat);
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }

@@ -81,6 +81,10 @@ export const landing = {
 	},
 	projects: [
 		{
+			img: {
+				src: '/images/sunterra-frontend.png',
+				alt: 'Sunterra Frontend Landing Page Screenshot',
+			},
 			name: 'sunterra',
 			short_description:
 				'Sunterra is an original, Voxel-Styled, fantasy themed, metaverse MMORPG building on the Cardano Blockchain.',
@@ -94,11 +98,11 @@ export const landing = {
 					<p>
 						The application utilises the Cardano proposals{' '}
 						<ExternalLink href="https://cips.cardano.org/cips/cip30/">
-							<>CIP30</>
-						</ExternalLink>
+							CIP30
+						</ExternalLink>{' '}
 						and{' '}
 						<ExternalLink href="https://developers.cardano.org/docs/governance/cardano-improvement-proposals/cip-0008/">
-							<>CIP-0008</>
+							CIP-0008
 						</ExternalLink>
 						, to give the user a seamless sign up / login process
 						via their chosen Cardano Wallet.
@@ -124,6 +128,10 @@ export const landing = {
 			featured: 3,
 		},
 		{
+			img: {
+				src: '/images/sunterra-backend-screenshot.png',
+				alt: 'Sunterra Backend Code Screenshot',
+			},
 			name: 'sunterra-backend',
 			short_description:
 				'The accompanying project to Sunterra, A Voxel-Styled MMORPG building on the Cardano ecosystem.',
@@ -173,6 +181,10 @@ export const landing = {
 			featured: 4,
 		},
 		{
+			img: {
+				src: '/images/polygon-nft-minter-screenshot.png',
+				alt: 'Polygon NFT Minter Landing Page Screenshot',
+			},
 			name: 'polygon-nft-minter',
 			short_description:
 				'A Project built in React that allows a user to connect via their Metamask wallet, and mint an NFT on the Polygon Network.',
@@ -221,28 +233,31 @@ export const landing = {
 			featured: 5,
 		},
 		{
+			img: {
+				src: '/images/arbitrage-scanner-screenshot.png',
+				alt: 'Arbitrage Scanner Code Screenshot',
+			},
 			name: 'arbitrage-scanner-screenshot',
 			short_description:
 				'A project that checks current trading pairs for potential arbitrage and triangle trading opportunities.',
 			long_description: (
 				<>
 					<p>
-						This decentralized arbitrage tool, developed using
-						Node.js and Web3, scans multiple exchanges for profit
-						opportunities. It utilizes algorithms off-chain to
-						execute transactions on-chain via custom{' '}
+						An automated trading tool used to scan multiple
+						exchanges for profit opportunities. It utilizes
+						algorithms off-chain to execute transactions on-chain
+						via custom{' '}
 						<ExternalLink href="https://bscscan.com/address/0x3f6df0d0B48674e3b679435521dA73227300305B">
-							Solidity contracts
-						</ExternalLink>{' '}
-						Solidity contracts when identifying profitable trades.
+							Solidity contracts.
+						</ExternalLink>
 					</p>
 					<p>
 						Additionally, it explores{' '}
 						<ExternalLink href="https://bscscan.com/address/0x7a3474a680ECD84a69149279E11cC3879914D46F">
 							triangular trading
 						</ExternalLink>{' '}
-						triangular trading opportunities, verifying
-						profitability before executing transactions on-chain.
+						opportunities, verifying profitability before executing
+						transactions on-chain.
 					</p>
 				</>
 			),
@@ -292,6 +307,10 @@ export const landing = {
 			featured: false,
 		},
 		{
+			img: {
+				src: '/images/blockframe-screenshot.png',
+				alt: 'Blockframe Landing Page Screenshot',
+			},
 			name: 'blockframe-screenshot',
 			short_description:
 				"A collaborative project for searching NFT's on the Ethereum network via our NFT search tool!",

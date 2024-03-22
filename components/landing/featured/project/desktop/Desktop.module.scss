@@ -1,4 +1,4 @@
-@import '../../../../styles/mixins.scss';
+@import '../../../../../styles/mixins.scss';
 
 .wrapper {
 
@@ -36,31 +36,34 @@
                 width: 100%;
                 padding-bottom: 63%;
                 object-fit: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
 
-                // TODO: Remove once going all SSR.
-                &.sunterra {
-                    @include background-image(sunterra-frontend, png, contain, center, no-repeat);
-                }
+                // // TODO: Remove once going all SSR.
+                // &.sunterra {
+                //     @include background-image(sunterra-frontend, png, contain, center, no-repeat);
+                // }
 
-                &.sunterra-backend {
-                    @include background-image(sunterra-backend-screenshot, png, contain, center, no-repeat);
-                }
+                // &.sunterra-backend {
+                //     @include background-image(sunterra-backend-screenshot, png, contain, center, no-repeat);
+                // }
 
-                &.polygon-nft-minter {
-                    @include background-image(polygon-nft-minter-screenshot, png, contain, center, no-repeat);
-                }
+                // &.polygon-nft-minter {
+                //     @include background-image(polygon-nft-minter-screenshot, png, contain, center, no-repeat);
+                // }
 
-                &.discord-twitter-tracker {
-                    @include background-image(discord-twitter-tracker-screenshot, png, contain, center, no-repeat);
-                }
+                // &.discord-twitter-tracker {
+                //     @include background-image(discord-twitter-tracker-screenshot, png, contain, center, no-repeat);
+                // }
 
-                &.arbitrage-scanner-screenshot {
-                    @include background-image(arbitrage-scanner-screenshot, png, contain, center, no-repeat);
-                }
+                // &.arbitrage-scanner-screenshot {
+                //     @include background-image(arbitrage-scanner-screenshot, png, contain, center, no-repeat);
+                // }
 
-                &.blockframe-screenshot {
-                    @include background-image(blockframe-screenshot, png, contain, center, no-repeat);
-                }
+                // &.blockframe-screenshot {
+                //     @include background-image(blockframe-screenshot, png, contain, center, no-repeat);
+                // }
 
             }
 
